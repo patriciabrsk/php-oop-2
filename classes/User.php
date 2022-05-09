@@ -8,6 +8,7 @@ class User {
     private $birthDate;
     private $isSignedUp;
     private $discount;
+    private Card $creditCard;
     
     /**
      * Constructor
