@@ -18,13 +18,13 @@ class Card {
         $this->number = $number;
 
         if(!is_numeric($expMonth) || $expMonth < 1 || $expMonth > 12) {
-            die('Invalid expiry month');
+            die('Invalid expiration month');
         } else {
             $this->expMonth = $expMonth;
         }
 
         if(!is_numeric($expYear) || $expYear < date('Y') || $expYear > date('Y')){
-            die('Invalid expiry year');
+            die('Invalid expiration year');
         } else {
             $this->expYear = $expYear;
         }
