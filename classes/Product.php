@@ -5,6 +5,7 @@
  */
 class Product {
     protected $name;
+    protected $brand;
     protected $id;
     protected $price;
     protected $description;
@@ -14,14 +15,16 @@ class Product {
      * Constructor
      *
      * @param  string $name - Product name
-     * @param  int $id - Product id number
+     * @param  string $brand - Product brand name
+     * @param  int $id - Product ID number
      * @param  float $price - Product price
      * @param  string $description - Product description
      * @param  string $category - Product category
      */
-    function __construct(string $name, int $id, float $price, string $description = null, string $category)
+    function __construct(string $name, string $brand, int $id, float $price, string $description = null, string $category)
     {
         $this->name = $name;
+        $this->brand = $brand;
         $this->id = $id; 
         $this->price = $price; 
         $this->description = $description; 
@@ -38,9 +41,18 @@ class Product {
     }
     
     /**
+     * getBrand
+     *
+     * @return string $brand
+     */
+    function getBrand() {
+        return $this->brand;
+    }
+    
+    /**
      * getId
      *
-     * @return int
+     * @return int $id
      */
     function getId() {
         return $this->id;

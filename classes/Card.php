@@ -2,22 +2,33 @@
 
 class Card {
     protected $number;
-    protected $expirationMonth;
-    protected $expirationYear;
+    protected $expMonth;
+    protected $expYear;
     protected $balance;
     
     /**
      * Constructor
      *
      * @param  int $number
-     * @param  int $expirationMonth
-     * @param  int $expirationYear
+     * @param  int $expMonth
+     * @param  int $expYear
      * @param  int $balance
      */
-    function __construct(int $number, int $expirationMonth, int $expirationYear, int $balance) {
+    function __construct(int $number, int $expMonth, int $expYear, int $balance) {
         $this->number = $number;
-        $this->expirationMonth = $expirationMonth;
-        $this->expirationYear = $expirationYear;
+
+        if(!is_numeric($expMonth) || $expMonth < 1 || $expMonth > 12) {
+            die('Invalid expiry month');
+        } else {
+            $this->expMonth = $expMonth;
+        }
+
+        if(!is_numeric($expYear) || $expYear < date('Y') || $expYear > date('Y')){
+            die('Invalid expiry year');
+        } else {
+            $this->expYear = $expYear;
+        }
+        $this->expYear = $expYear;
         $this->balance = $balance;
     }
     
@@ -57,6 +68,8 @@ class Card {
     {
         return $this->balance;
     }
+
+    public
 }
 
 ?>

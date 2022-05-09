@@ -30,10 +30,16 @@ class User {
         $this->password = $password;
         $this->birthDate = $birthDate;
         $this->isSignedUp = $isSignedUp;
+        $this->discount = $discount;
     }
 
-    function 
+    function getDiscount() {
+        return 'You get a ' . $this->discount . '% on your purchase.';
+    }
 
+    function setDiscount() {
+        return $this->isSignedUp ? $this->discount = 20 : $this->discount = 0;
+    }
 }
 
 ?>
