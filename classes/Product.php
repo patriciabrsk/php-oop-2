@@ -4,11 +4,11 @@
  * Product
  */
 class Product {
-    private $name;
-    private $id;
-    private $price;
-    private $description;
-    private $category;
+    protected $name;
+    protected $id;
+    protected $price;
+    protected $description;
+    protected $category;
     
     /**
      * Constructor

@@ -1,14 +1,15 @@
 <?php 
 
+require_once __DIR__ . '/Card.php';
 class User {
-    private $firstName;
-    private $lastName;
-    private $username;
-    private $password;
-    private $birthDate;
-    private $isSignedUp;
-    private $discount;
-    private Card $creditCard;
+    protected $firstName;
+    protected $lastName;
+    protected $username;
+    protected $password;
+    protected $birthDate;
+    protected $isSignedUp;
+    protected $discount;
+    protected Card $creditCard;
     
     /**
      * Constructor
@@ -18,10 +19,10 @@ class User {
      * @param  string $username
      * @param  string $password
      * @param  int $birthDate
-     * @param  mixed $isSignedUp
-     * @return void
+     * @param  bool $isSignedUp
+     * @param  int $discount
      */
-    function __construct(string $firstName, string $lastName, string $username, string $password, int $birthDate, bool $isSignedUp)
+    function __construct(string $firstName, string $lastName, string $username, string $password, int $birthDate, bool $isSignedUp, int $discount)
     {
         $this->firstName = $firstName;
         $this->lastName = $lastName;
@@ -31,7 +32,7 @@ class User {
         $this->isSignedUp = $isSignedUp;
     }
 
-    function
+    function 
 
 }
 
