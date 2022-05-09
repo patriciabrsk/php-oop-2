@@ -38,6 +38,15 @@ class Product {
     }
     
     /**
+     * getId
+     *
+     * @return int
+     */
+    function getId() {
+        return $this->id;
+    }
+    
+    /**
      * getPrice
      *
      * @return float $price
