@@ -22,7 +22,7 @@ class User {
      * @param  bool $isSignedUp
      * @param  int $discount
      */
-    function __construct(string $firstName, string $lastName, string $username, string $password, int $birthDate, bool $isSignedUp, int $discount)
+    function __construct(string $firstName, string $lastName, string $username, string $password, int $birthDate, bool $isSignedUp, int $discount, Card $creditCard)
     {
         $this->firstName = $firstName;
         $this->lastName = $lastName;
@@ -31,6 +31,7 @@ class User {
         $this->birthDate = $birthDate;
         $this->isSignedUp = $isSignedUp;
         $this->discount = $discount;
+        $this->creditCard = $creditCard;
     }
 
     function getDiscount() {
@@ -39,6 +40,10 @@ class User {
 
     function setDiscount() {
         return $this->isSignedUp ? $this->discount = 20 : $this->discount = 0;
+    }
+
+    function getName() {
+
     }
 }
 

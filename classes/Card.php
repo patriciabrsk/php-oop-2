@@ -2,19 +2,23 @@
 
 class Card {
     protected $number;
+    protected $type;
     protected $expMonth;
     protected $expYear;
+    protected $securityCode;
     protected $balance;
     
     /**
      * Constructor
      *
      * @param  int $number
+     * @param  string $type
      * @param  int $expMonth
      * @param  int $expYear
+     * @param  int $securityCode
      * @param  int $balance
      */
-    function __construct(int $number, int $expMonth, int $expYear, int $balance) {
+    function __construct(int $number, string $type, int $expMonth, int $expYear, int $securityCode, int $balance) {
         $this->number = $number;
 
         if(!is_numeric($expMonth) || $expMonth < 1 || $expMonth > 12) {
@@ -59,6 +63,10 @@ class Card {
         return $this->expirationYear;
     }
     
+    function getSecurityCode() {
+        return $this->securityCode;
+    }
+
     /**
      * getBalance
      *
