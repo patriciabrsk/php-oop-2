@@ -34,6 +34,10 @@ class User {
         $this->creditCard = $creditCard;
     }
 
+    function setCreditCard(Card $creditCard) {
+        $this->creditCard = $creditCard;
+    }
+
     function getDiscount() {
         return 'You get a ' . $this->discount . '% on your purchase.';
     }
@@ -43,7 +47,15 @@ class User {
     }
 
     function getName() {
+        return $this->name;
+    }
 
+    function getLastName() {
+        return $this->lastName;
+    }
+
+    function getUsername() {
+        return $this->username;
     }
 }
 
