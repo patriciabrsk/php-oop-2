@@ -21,7 +21,7 @@ class Product {
      * @param  string $description - Product description
      * @param  string $category - Product category
      */
-    function __construct(string $name, string $brand, int $id, float $price, string $description = null, string $category)
+    function __construct(string $name, string $brand, int $id, float $price, string $description, string $category)
     {
         $this->name = $name;
         $this->brand = $brand;

@@ -68,8 +68,6 @@ class Card {
     {
         return $this->balance;
     }
-
-    public
 }
 
 ?>
